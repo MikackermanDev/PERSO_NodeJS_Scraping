@@ -1,11 +1,11 @@
-const puppeteer = require("puppeteer");
+import { launch } from "puppeteer";
 
 const url =
 	"https://www.ldlc.com/informatique/pieces-informatique/carte-graphique-interne/c4684/+fv121-20576.html";
 
 async function scrapeData() {
 	try {
-		const browser = await puppeteer.launch({ headless: "new" });
+		const browser = await launch({ headless: "new" });
 
 		const page = await browser.newPage();
 
@@ -28,3 +28,5 @@ async function scrapeData() {
 }
 
 scrapeData();
+
+export default scrapeData();

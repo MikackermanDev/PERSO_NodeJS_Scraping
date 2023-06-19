@@ -9,28 +9,7 @@
 </head>
 
 <body>
-  <table id="data-table">
-    <tr>
-      <th>Titre</th>
-      <th>Prix</th>
-    </tr>
-  </table>
 
-  <script src="scraping.js"></script>
-  <script>
-    async function displayData() {
-      const data = await scrapeData();
-      const table = document.getElementById("data-table");
-      data.forEach(item => {
-        const row = table.insertRow();
-        const titleCell = row.insertCell();
-        const priceCell = row.insertCell();
-        titleCell.textContent = item.title;
-        priceCell.textContent = item.price;
-      });
-    }
-    displayData();
-  </script>
 </body>
 
 </html>
